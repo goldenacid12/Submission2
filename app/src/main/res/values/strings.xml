@@ -14,4 +14,6 @@
     <string name="logo">LOGO</string>
     <string name="repository">Repository</string>
     <string name="reposit_number">999</string>
+    <string name="settings">settings</string>
+    <string name="favorites">favorites</string>
 </resources>
