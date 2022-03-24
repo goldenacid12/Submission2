@@ -1,4 +1,4 @@
-package com.dicoding.latihan.submission2
+package com.dicoding.latihan.submission2.ui.main
 
 import android.app.SearchManager
 import android.os.Bundle
@@ -11,6 +11,10 @@ import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dicoding.latihan.submission2.api.ApiConfig
+import com.dicoding.latihan.submission2.ItemsItem
+import com.dicoding.latihan.submission2.R
+import com.dicoding.latihan.submission2.UserResponse
 import com.dicoding.latihan.submission2.databinding.ActivityMainBinding
 import retrofit2.Call
 import retrofit2.Callback

@@ -1,5 +1,7 @@
-package com.dicoding.latihan.submission2
+package com.dicoding.latihan.submission2.api
 
+import com.dicoding.latihan.submission2.*
+import com.dicoding.latihan.submission2.ui.detail.DetailUserResponse
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path

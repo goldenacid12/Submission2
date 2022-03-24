@@ -4,7 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/alane/AndroidStudioProjects/Submission2/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.146" />
-        <entry key="..\:/Users/alane/AndroidStudioProjects/Submission2/app/src/main/res/layout/activity_detail.xml" value="0.2" />
+        <entry key="..\:/Users/alane/AndroidStudioProjects/Submission2/app/src/main/res/layout/activity_detail.xml" value="0.22" />
+        <entry key="..\:/Users/alane/AndroidStudioProjects/Submission2/app/src/main/res/layout/activity_favorite.xml" value="0.11594202898550725" />
         <entry key="..\:/Users/alane/AndroidStudioProjects/Submission2/app/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="..\:/Users/alane/AndroidStudioProjects/Submission2/app/src/main/res/layout/fragment_detail.xml" value="0.2" />
         <entry key="..\:/Users/alane/AndroidStudioProjects/Submission2/app/src/main/res/layout/fragment_follower.xml" value="0.18" />

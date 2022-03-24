@@ -1,13 +1,19 @@
-package com.dicoding.latihan.submission2
+package com.dicoding.latihan.submission2.ui.main
 
+import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.dicoding.latihan.submission2.api.ApiConfig
+import com.dicoding.latihan.submission2.ItemsItem
+import com.dicoding.latihan.submission2.repository.UserRepository
+import com.dicoding.latihan.submission2.UserResponse
 import retrofit2.Call
 import retrofit2.Response
 
-class MainViewModel : ViewModel() {
+class MainViewModel(application: Application) : ViewModel() {
+    private val mUserRepository: UserRepository = UserRepository(application)
     //initiate variable for checking setUserData
     private val _user = MutableLiveData<List<ItemsItem>>()
     val user: LiveData<List<ItemsItem>> = _user

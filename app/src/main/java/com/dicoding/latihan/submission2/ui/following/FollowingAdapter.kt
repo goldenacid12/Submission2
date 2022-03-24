@@ -1,7 +1,6 @@
-package com.dicoding.latihan.submission2
+package com.dicoding.latihan.submission2.ui.following
 
 import android.content.Intent
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,12 +8,15 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.dicoding.latihan.submission2.FollowingResponseItem
+import com.dicoding.latihan.submission2.R
+import com.dicoding.latihan.submission2.ui.detail.DetailActivity
 
-class FollowerAdapter(
-    private val listReview: ArrayList<FollowerResponseItem>,
-    private val context: FollowerFragment
+class FollowingAdapter(
+    private val listReview: ArrayList<FollowingResponseItem>,
+    private val context: FollowingFragment
 ) :
-    RecyclerView.Adapter<FollowerAdapter.ViewHolder>() {
+    RecyclerView.Adapter<FollowingAdapter.ViewHolder>() {
     private lateinit var mListener: OnItemClickListener
 
     //function when clicked
@@ -35,7 +37,6 @@ class FollowerAdapter(
     override fun onBindViewHolder(viewholder: ViewHolder, position: Int) {
         //assign data to correspondence variable
         val data = listReview[position]
-        Log.d("data", data.toString())
         val userLogin = viewholder.tvItem1
         val userAvatar = viewholder.tvItem2
         userLogin.text = data.login
@@ -58,6 +59,3 @@ class FollowerAdapter(
         val tvItem2: ImageView = view.findViewById(R.id.ivAvatar)
     }
 }
-
-
-

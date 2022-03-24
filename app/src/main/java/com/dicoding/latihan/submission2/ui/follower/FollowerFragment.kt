@@ -1,4 +1,4 @@
-package com.dicoding.latihan.submission2
+package com.dicoding.latihan.submission2.ui.follower
 
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.dicoding.latihan.submission2.api.ApiConfig
+import com.dicoding.latihan.submission2.FollowerResponseItem
+import com.dicoding.latihan.submission2.ui.detail.DetailActivity
+import com.dicoding.latihan.submission2.ui.detail.DetailViewModel
 import com.dicoding.latihan.submission2.databinding.FragmentFollowerBinding
 import retrofit2.Call
 import retrofit2.Callback

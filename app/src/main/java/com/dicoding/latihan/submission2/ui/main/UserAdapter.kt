@@ -1,4 +1,4 @@
-package com.dicoding.latihan.submission2
+package com.dicoding.latihan.submission2.ui.main
 
 import android.content.Intent
 import android.view.LayoutInflater
@@ -8,12 +8,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.dicoding.latihan.submission2.ItemsItem
+import com.dicoding.latihan.submission2.R
+import com.dicoding.latihan.submission2.ui.detail.DetailActivity
 
-class FollowingAdapter(
-    private val listReview: ArrayList<FollowingResponseItem>,
-    private val context: FollowingFragment
-) :
-    RecyclerView.Adapter<FollowingAdapter.ViewHolder>() {
+class UserAdapter(
+    private val listReview: MutableList<ItemsItem>,
+    private val context: MainActivity
+) : RecyclerView.Adapter<UserAdapter.ViewHolder>() {
     private lateinit var mListener: OnItemClickListener
 
     //function when clicked
@@ -41,7 +43,7 @@ class FollowingAdapter(
 
         //if RecyclerView clicked
         viewholder.itemView.setOnClickListener {
-            val intent = Intent(context.activity, DetailActivity::class.java)
+            val intent = Intent(context, DetailActivity::class.java)
             intent.putExtra(DetailActivity.EXTRA_DATA, data.login)
             context.startActivity(intent)
         }

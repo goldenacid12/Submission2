@@ -1,4 +1,4 @@
-package com.dicoding.latihan.submission2
+package com.dicoding.latihan.submission2.ui.detail
 
 import com.google.gson.annotations.SerializedName
 

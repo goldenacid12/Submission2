@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".DetailActivity">
-
+    tools:context=".ui.detail.DetailActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -23,8 +22,8 @@
 
         <ImageView
             android:id="@+id/userProfile"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_marginStart="25dp"
             android:layout_marginTop="50dp"
             android:contentDescription="@string/todo"
@@ -129,6 +128,21 @@
             android:text="@string/reposit_number"
             android:textAlignment="center"
             android:textSize="30sp" />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fav_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="25dp"
+            android:foregroundGravity="bottom"
+            android:src="@drawable/ic_baseline_favorite_24"
+            app:fabSize="normal"
+            app:layout_anchorGravity="bottom|end"
+            android:contentDescription="@string/todo"
+            tools:ignore="RelativeOverlap" />
     </RelativeLayout>
 
     <com.google.android.material.tabs.TabLayout
@@ -145,7 +159,11 @@
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/view_pager"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent" >
+
+
+    </androidx.viewpager2.widget.ViewPager2>
+
 
 
 </LinearLayout>

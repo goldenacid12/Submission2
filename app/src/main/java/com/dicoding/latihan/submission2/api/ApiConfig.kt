@@ -1,5 +1,6 @@
-package com.dicoding.latihan.submission2
+package com.dicoding.latihan.submission2.api
 
+import com.dicoding.latihan.submission2.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

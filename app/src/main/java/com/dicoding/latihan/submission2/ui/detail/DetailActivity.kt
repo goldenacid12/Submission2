@@ -1,4 +1,4 @@
-package com.dicoding.latihan.submission2
+package com.dicoding.latihan.submission2.ui.detail
 
 import android.os.Bundle
 import android.util.Log
@@ -9,6 +9,8 @@ import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
+import com.dicoding.latihan.submission2.api.ApiConfig
+import com.dicoding.latihan.submission2.R
 import com.dicoding.latihan.submission2.databinding.ActivityDetailBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
