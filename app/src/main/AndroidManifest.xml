@@ -12,22 +12,28 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Submission2">
         <activity
-            android:name=".FavoriteActivity"
+            android:name=".ui.splash.SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.settings.SettingsActivity"
             android:exported="false" />
         <activity
-            android:name=".DetailActivity"
+            android:name=".ui.favorite.FavoriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.detail.DetailActivity"
             android:exported="false"
             android:label="@string/title_activity_detail"
             android:theme="@style/Theme.Submission2.NoActionBar" />
         <activity
-            android:name=".MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:name=".ui.main.MainActivity"
+            android:exported="false"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
     </application>
 
 </manifest>

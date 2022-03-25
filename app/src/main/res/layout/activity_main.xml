@@ -4,14 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".ui.main.MainActivity">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:alpha=".5"
-        android:contentDescription="@string/logo"
-        android:src="@drawable/github_logo" />
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/github_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/logo" />
 
     <FrameLayout
         android:layout_height="match_parent"

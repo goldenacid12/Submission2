@@ -9,11 +9,12 @@ import com.dicoding.latihan.submission2.api.ApiConfig
 import com.dicoding.latihan.submission2.ItemsItem
 import com.dicoding.latihan.submission2.repository.UserRepository
 import com.dicoding.latihan.submission2.UserResponse
+import com.dicoding.latihan.submission2.database.FavoriteUser
 import retrofit2.Call
 import retrofit2.Response
 
-class MainViewModel(application: Application) : ViewModel() {
-    private val mUserRepository: UserRepository = UserRepository(application)
+class MainViewModel : ViewModel() {
+
     //initiate variable for checking setUserData
     private val _user = MutableLiveData<List<ItemsItem>>()
     val user: LiveData<List<ItemsItem>> = _user

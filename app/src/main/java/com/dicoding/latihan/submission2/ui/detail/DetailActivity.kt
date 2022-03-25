@@ -1,5 +1,8 @@
 package com.dicoding.latihan.submission2.ui.detail
 
+import android.content.Intent
+import android.content.res.ColorStateList
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.View
@@ -7,11 +10,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.annotation.StringRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import com.bumptech.glide.Glide
 import com.dicoding.latihan.submission2.api.ApiConfig
 import com.dicoding.latihan.submission2.R
+import com.dicoding.latihan.submission2.database.FavoriteUser
 import com.dicoding.latihan.submission2.databinding.ActivityDetailBinding
+import com.dicoding.latihan.submission2.databinding.ActivityFavoriteBinding
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
 import retrofit2.Call
@@ -21,6 +27,9 @@ import retrofit2.Response
 class DetailActivity : AppCompatActivity() {
     //make variable for binding RecyclerView
     private lateinit var binding: ActivityDetailBinding
+    private var _activityFavoriteBinding: ActivityFavoriteBinding? = null
+    private val binding2 get() = _activityFavoriteBinding
+    private var user: FavoriteUser? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,6 +48,22 @@ class DetailActivity : AppCompatActivity() {
 
         //receive data from Main Activity
         val userLogin = intent.getStringExtra(EXTRA_DATA)
+
+        //share profile button
+        binding.shareButton.setOnClickListener{
+            val intent =Intent(Intent.ACTION_SEND)
+            intent.type = "text/plain"
+            val head = "Github User Profile\n http://github.com/${userLogin}/"
+            intent.putExtra(Intent.EXTRA_TEXT, head)
+            startActivity(intent)
+        }
+
+
+        binding.favButton.setOnClickListener{
+            binding.favButton.imageTintList = ColorStateList.valueOf(Color.rgb(255,50,50))
+            user = intent.getParcelableExtra(EXTRA_USER)
+            user?.name = userLogin
+        }
 
         //start function detail user
         if (userLogin != null) {
@@ -125,5 +150,6 @@ class DetailActivity : AppCompatActivity() {
         )
         const val TAG = "TAG"
         const val EXTRA_DATA = "EXTRA_DATA"
+        const val EXTRA_USER = "EXTRA_USER"
     }
 }

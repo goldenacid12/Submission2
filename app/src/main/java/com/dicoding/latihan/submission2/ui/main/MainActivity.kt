@@ -1,6 +1,7 @@
 package com.dicoding.latihan.submission2.ui.main
 
 import android.app.SearchManager
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
@@ -16,6 +17,8 @@ import com.dicoding.latihan.submission2.ItemsItem
 import com.dicoding.latihan.submission2.R
 import com.dicoding.latihan.submission2.UserResponse
 import com.dicoding.latihan.submission2.databinding.ActivityMainBinding
+import com.dicoding.latihan.submission2.ui.favorite.FavoriteActivity
+import com.dicoding.latihan.submission2.ui.settings.SettingsActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -71,6 +74,24 @@ class MainActivity : AppCompatActivity() {
         return true
     }
 
+    override fun onOptionsItemSelected(item: MenuItem): Boolean{
+        return when (item.itemId){
+            R.id.settings -> {
+                val settings = Intent(this, SettingsActivity::class.java)
+                startActivity(settings)
+                true
+            }
+            R.id.favorites -> {
+                val favorite = Intent(this, FavoriteActivity::class.java)
+                startActivity(favorite)
+                true
+            }
+            else -> {
+                true
+            }
+        }
+    }
+
     //fetch data from user API
     private fun findUser(username: String) {
         showLoading(true)
@@ -111,10 +132,6 @@ class MainActivity : AppCompatActivity() {
             override fun onItemClick(v: Int) {
             }
         })
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return true
     }
 
     //ProgressBar Visibility

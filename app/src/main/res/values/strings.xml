@@ -16,4 +16,11 @@
     <string name="reposit_number">999</string>
     <string name="settings">settings</string>
     <string name="favorites">favorites</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="splash">splash</string>
+    <string name="share">share</string>
+    <string name="user_background">user background</string>
+    <string name="name_logo">name logo</string>
+    <string name="company_logo">company logo</string>
+    <string name="location_logo">location logo</string>
 </resources>
