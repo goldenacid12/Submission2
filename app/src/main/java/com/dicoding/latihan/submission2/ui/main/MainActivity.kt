@@ -76,11 +76,13 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean{
         return when (item.itemId){
+            //change activity if button setting pressed
             R.id.settings -> {
                 val settings = Intent(this, SettingsActivity::class.java)
                 startActivity(settings)
                 true
             }
+            //change activity if button favorites pressed
             R.id.favorites -> {
                 val favorite = Intent(this, FavoriteActivity::class.java)
                 startActivity(favorite)

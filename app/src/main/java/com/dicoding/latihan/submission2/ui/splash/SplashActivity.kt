@@ -1,9 +1,9 @@
 package com.dicoding.latihan.submission2.ui.splash
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
+import androidx.appcompat.app.AppCompatActivity
 import com.dicoding.latihan.submission2.R
 import com.dicoding.latihan.submission2.ui.main.MainActivity
 
