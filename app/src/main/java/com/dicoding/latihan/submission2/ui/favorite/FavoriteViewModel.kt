@@ -1,13 +1,17 @@
 package com.dicoding.latihan.submission2.ui.favorite
 
 import android.app.Application
+import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModel
 import com.dicoding.latihan.submission2.database.FavoriteUser
-import com.dicoding.latihan.submission2.repository.UserRepository
+import com.dicoding.latihan.submission2.database.UserDao
+import com.dicoding.latihan.submission2.database.UserRoomDatabase
 
-class FavoriteViewModel(application: Application):ViewModel() {
-    private val mUserRepository: UserRepository = UserRepository(application)
+class FavoriteViewModel(application: Application): AndroidViewModel(application) {
+    //database function setup
+    private var favDatabase: UserRoomDatabase? = UserRoomDatabase.getDatabase(application)
+    private var mUserDao: UserDao? = favDatabase?.userDao()
 
-    fun getAllUsers(): LiveData<List<FavoriteUser>> = mUserRepository.getAllUsers()
+    //function to get favorite user for database
+    fun getFavorite(): LiveData<List<FavoriteUser>>?= mUserDao?.getFavorite()
 }

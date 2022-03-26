@@ -6,7 +6,8 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 import kotlinx.parcelize.Parcelize
 
-@Entity
+//setup database class
+@Entity(tableName = "fav_user")
 @Parcelize
 data class FavoriteUser(
     @PrimaryKey(autoGenerate = true)
@@ -16,6 +17,6 @@ data class FavoriteUser(
     @ColumnInfo(name = "login")
     var name: String? = null,
 
-    @ColumnInfo(name = "profile")
-    var profile: String? = null
+    @ColumnInfo(name = "avatar")
+    var avatar: String? = null
 ):Parcelable

@@ -2,9 +2,11 @@ package com.dicoding.latihan.submission2.api
 
 import com.dicoding.latihan.submission2.*
 import com.dicoding.latihan.submission2.ui.detail.DetailUserResponse
+import com.dicoding.latihan.submission2.ui.following.FollowingResponseItem
+import com.dicoding.latihan.submission2.ui.main.ItemsItem
+import com.dicoding.latihan.submission2.ui.main.UserResponse
 import retrofit2.Call
 import retrofit2.http.GET
-import retrofit2.http.Headers
 import retrofit2.http.Path
 import retrofit2.http.Query
 

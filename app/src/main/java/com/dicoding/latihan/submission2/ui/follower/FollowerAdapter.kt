@@ -15,9 +15,9 @@ import com.dicoding.latihan.submission2.ui.detail.DetailActivity
 
 class FollowerAdapter(
     private val listReview: ArrayList<FollowerResponseItem>,
-    private val context: FollowerFragment
-) :
-    RecyclerView.Adapter<FollowerAdapter.ViewHolder>() {
+    private val context: FollowerFragment)
+    : RecyclerView.Adapter<FollowerAdapter.ViewHolder>() {
+
     private lateinit var mListener: OnItemClickListener
 
     //function when clicked
@@ -48,6 +48,7 @@ class FollowerAdapter(
         viewholder.itemView.setOnClickListener {
             val intent = Intent(context.activity, DetailActivity::class.java)
             intent.putExtra(DetailActivity.EXTRA_DATA, data.login)
+            intent.putExtra(DetailActivity.EXTRA_AVATAR, data.avatarUrl)
             context.startActivity(intent)
         }
     }

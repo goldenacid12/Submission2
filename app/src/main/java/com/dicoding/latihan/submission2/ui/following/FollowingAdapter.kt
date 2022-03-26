@@ -8,7 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.dicoding.latihan.submission2.FollowingResponseItem
 import com.dicoding.latihan.submission2.R
 import com.dicoding.latihan.submission2.ui.detail.DetailActivity
 
@@ -46,6 +45,7 @@ class FollowingAdapter(
         viewholder.itemView.setOnClickListener {
             val intent = Intent(context.activity, DetailActivity::class.java)
             intent.putExtra(DetailActivity.EXTRA_DATA, data.login)
+            intent.putExtra(DetailActivity.EXTRA_AVATAR, data.avatarUrl)
             context.startActivity(intent)
         }
     }

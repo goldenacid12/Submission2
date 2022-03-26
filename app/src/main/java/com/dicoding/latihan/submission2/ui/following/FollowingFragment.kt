@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.dicoding.latihan.submission2.FollowingResponseItem
 import com.dicoding.latihan.submission2.api.ApiConfig
 import com.dicoding.latihan.submission2.databinding.FragmentFollowingBinding
 import com.dicoding.latihan.submission2.ui.detail.DetailActivity
@@ -33,10 +32,7 @@ class FollowingFragment : Fragment() {
         binding = FragmentFollowingBinding.inflate(layoutInflater)
 
         //viewModel
-        detailViewModel = ViewModelProvider(
-            this,
-            ViewModelProvider.NewInstanceFactory()
-        )[DetailViewModel::class.java]
+        detailViewModel = ViewModelProvider(this)[DetailViewModel::class.java]
         detailViewModel.user2.observe(viewLifecycleOwner) { user2 -> followingData((user2 as ArrayList<FollowingResponseItem>)) }
         detailViewModel.login.observe(viewLifecycleOwner) { login -> followingDetail(login) }
         detailViewModel.isLoading.observe(viewLifecycleOwner) { showLoading(it) }

@@ -5,6 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
+//database setup
 @Database(entities = [FavoriteUser::class], version = 1)
 abstract class UserRoomDatabase: RoomDatabase() {
     abstract fun userDao(): UserDao
@@ -17,7 +18,7 @@ abstract class UserRoomDatabase: RoomDatabase() {
             if (INSTANCE == null){
                 synchronized(UserRoomDatabase::class.java){
                     INSTANCE = Room.databaseBuilder(context.applicationContext,
-                        UserRoomDatabase::class.java, "user_database").build()
+                        UserRoomDatabase::class.java, "userDatabase").build()
                 }
             }
             return INSTANCE as UserRoomDatabase

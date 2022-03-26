@@ -8,7 +8,6 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.dicoding.latihan.submission2.ItemsItem
 import com.dicoding.latihan.submission2.R
 import com.dicoding.latihan.submission2.ui.detail.DetailActivity
 
@@ -45,6 +44,8 @@ class UserAdapter(
         viewholder.itemView.setOnClickListener {
             val intent = Intent(context, DetailActivity::class.java)
             intent.putExtra(DetailActivity.EXTRA_DATA, data.login)
+            intent.putExtra(DetailActivity.EXTRA_FAV, data.id)
+            intent.putExtra(DetailActivity.EXTRA_AVATAR, data.avatarUrl)
             context.startActivity(intent)
         }
     }

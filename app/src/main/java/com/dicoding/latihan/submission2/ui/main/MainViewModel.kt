@@ -1,15 +1,10 @@
 package com.dicoding.latihan.submission2.ui.main
 
-import android.app.Application
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.dicoding.latihan.submission2.api.ApiConfig
-import com.dicoding.latihan.submission2.ItemsItem
-import com.dicoding.latihan.submission2.repository.UserRepository
-import com.dicoding.latihan.submission2.UserResponse
-import com.dicoding.latihan.submission2.database.FavoriteUser
 import retrofit2.Call
 import retrofit2.Response
 

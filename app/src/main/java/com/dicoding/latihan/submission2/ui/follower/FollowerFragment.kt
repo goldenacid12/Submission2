@@ -35,10 +35,7 @@ class FollowerFragment : Fragment() {
         binding.rvFollower.addItemDecoration(itemDecoration)
 
         //viewModel
-        detailViewModel = ViewModelProvider(
-            this,
-            ViewModelProvider.NewInstanceFactory()
-        )[DetailViewModel::class.java]
+        detailViewModel = ViewModelProvider(this)[DetailViewModel::class.java]
         detailViewModel.user1.observe(viewLifecycleOwner) { user1 -> followerData((user1 as ArrayList<FollowerResponseItem>)) }
         detailViewModel.login.observe(viewLifecycleOwner) { login -> followerDetail(login) }
         detailViewModel.isLoading.observe(viewLifecycleOwner) { showLoading(it) }
